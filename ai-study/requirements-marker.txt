@@ -1,0 +1,6 @@
+-r requirements-paddle.txt
+
+# Optional alternative PDF-to-Markdown converter.
+# Marker is GPU/CPU intensive and uses GPL-3.0 code with separately licensed
+# model weights. Review its license before commercial distribution.
+marker-pdf>=1.0.0

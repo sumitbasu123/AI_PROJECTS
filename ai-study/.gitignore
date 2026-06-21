@@ -1,0 +1,30 @@
+__pycache__/
+*.py[cod]
+.venv/
+.venv311/
+
+# Private learning material and generated indexes
+study_materials/
+data/
+archive/
+logs/
+markdown_store/
+vectorstore/
+*.pdf
+*.docx
+*.jpg
+*.jpeg
+*.png
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Tooling
+.pytest_cache/
+.ruff_cache/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

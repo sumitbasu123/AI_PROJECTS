@@ -1,0 +1,6 @@
+-r requirements.txt
+
+# Recommended scanned-PDF stack for Python 3.11.
+paddlepaddle>=3.0.0
+paddleocr[doc-parser]>=3.0.0
+docling>=2.0.0
