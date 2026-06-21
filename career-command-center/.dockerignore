@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+.git/
+.env
+career_command.db
+profile.json
+settings.json
+.streamlit/secrets.toml
+resume.docx
