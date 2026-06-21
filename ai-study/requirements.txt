@@ -1,0 +1,78 @@
+# ============================================================
+#  AI Study — Python Dependencies
+#  Install: python -m pip install -r requirements.txt
+# ============================================================
+
+# ── LangChain ────────────────────────────────────────────────
+langchain>=1.3.1
+langchain-community>=0.4.2
+langchain-text-splitters>=1.1.2
+
+# ── LangGraph ────────────────────────────────────────────────
+langgraph>=1.2.1
+langgraph-checkpoint>=4.1.1
+
+# ── Vector store ─────────────────────────────────────────────
+chromadb>=1.5.9
+
+# ── Embeddings ───────────────────────────────────────────────
+sentence-transformers>=5.5.1
+
+# ── PDF reading ──────────────────────────────────────────────
+pypdf>=5.9.0
+PyMuPDF>=1.23.0
+
+# ── Image processing ─────────────────────────────────────────
+Pillow>=12.1.1
+numpy>=1.24.0
+opencv-python>=4.8.0
+
+# ── Web UI ───────────────────────────────────────────────────
+streamlit>=1.30.0
+
+# ── HTTP ─────────────────────────────────────────────────────
+requests>=2.28.0
+
+# ── Tesseract OCR (fallback — always available) ──────────────
+#  Also install Tesseract binary from:
+#  https://github.com/UB-Mannheim/tesseract/wiki
+pytesseract>=0.3.13
+
+# ============================================================
+#  OCR ENGINE OPTIONS
+# ============================================================
+#
+#  Recommended: use the dedicated Python 3.11 environment:
+#    powershell -ExecutionPolicy Bypass -File .\setup_python311.ps1
+#
+#  PaddleOCR + Docling dependencies are in requirements-paddle.txt.
+#  Marker is optional and is listed in requirements-marker.txt.
+#
+#  Option A — Surya OCR  (PRIMARY — Python 3.12 compatible)
+#    pip install surya-ocr
+#    Downloads ~1 GB model on first run (one time only).
+#    Excellent for printed textbook pages and handwriting.
+#
+#  Option B — Tesseract  (FALLBACK — always available)
+#    Already listed above (pytesseract).
+#    Install the binary from:
+#    https://github.com/UB-Mannheim/tesseract/wiki
+#
+#  The pipeline auto-selects: Surya -> Tesseract
+#
+# ============================================================
+#  FREE AI ENGINE OPTIONS  (for OCR correction + answers)
+# ============================================================
+#
+#  Option 1 — Ollama (fully local, recommended)
+#    Download: https://ollama.com
+#    Then: ollama pull gemma2:2b
+#
+#  Option 2 — Groq (free cloud, needs internet)
+#    Sign up: https://console.groq.com
+#    Then: set GROQ_API_KEY=your_key_here
+#
+#  Option 3 — Offline (no LLM, always works)
+#    OCR correction and QA generation are skipped.
+#    Use: python ingest.py --no-llm-correction --no-qa
+# ============================================================
